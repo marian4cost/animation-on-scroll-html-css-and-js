@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #4b4b4b;
+    overflow-x: hidden;
+}
+h1{
+    color: #fff;
+    position: relative;
+}
+p{
+    position: relative;
+}
+
+section .animate{
+    transition: 1s;
+    opacity: 0;
+    filter: blur(5px); /* da para borrar o conteúdo também caralho hihihi */
+}
+section.show-animate .animate{
+    opacity: 1;
+    filter: blur(0px);
+}
+
+/* sec-1 */
+.sec-1 .animate{
+    transform: translateX(-100%);
+}
+.sec-1.show-animate .animate{
+    transform: translateX(0%);
+}
+
+/* sec-2 */
+.sec-2 .animate{
+    transform: translateX(100%);
+}
+.sec-2.show-animate .animate{
+    transform: translateX(0%);
+}
+
+/* sec-3 */
+.sec-3 .animate{
+    transform: scale(.7);
+}
+.sec-3.show-animate .animate{
+    transform: scale(1);
+}
+
+/* sec-4 */
+.sec-4 .showRight-animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #4b4b4b; 
+    /* background: transparent;
+    border: 2px solid seagreen; */
+    transition: 1s;
+}
+.sec-4.show-animate .showRight-animate{
+    width: 0;
+}
+
+.sec-1 p{
+    color: #035bad;
+    width: 70%;
+}
+.sec-2 p{
+    color: #11ad03;
+    width: 70%;
+}
+.sec-3 p{
+    color: #9cad03;
+    width: 70%;
+}
+.sec-4 p{
+    color: #a703ad;
+    width: 70%;
+}
+.sec-5 .images{
+    display: flex;
+    flex-direction: row;
+}
+.sec-5 .images img{
+    max-width: 400px;
+    margin: 0px 20px;
+    transform: translateX(-100%);
+    /* transition-delay: calc(.2s * var(--i)); */
+}
+
+/* sec-5 */
+.sec-5.show-animate .images img{
+    transform: translateX(0%);
+}
